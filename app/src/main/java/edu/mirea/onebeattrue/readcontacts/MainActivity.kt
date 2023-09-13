@@ -18,10 +18,12 @@ class MainActivity : AppCompatActivity() {
             android.Manifest.permission.READ_CONTACTS
         ) == PackageManager.PERMISSION_GRANTED
 
-        if (permissionGranted)
+        if (permissionGranted) {
             requestContacts()
-        else
+        } else {
             Log.d("MainActivity", "Permission denied")
+        }
+
     }
 
     private fun requestContacts() {
